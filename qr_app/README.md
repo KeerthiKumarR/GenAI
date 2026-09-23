@@ -34,29 +34,30 @@ pip install -r requirements.txt
 
 ## 💻 Usage
 
-### Interactive Mode
-Simply run the script and enter your username or full URL when prompted:
+### Interactive / Default Mode
+Simply run the script to generate a QR code for your profile:
 ```bash
 python generate_qr.py
 ```
+*(Defaults to `https://www.linkedin.com/in/keerthi-kumar-r/`)*
 
 ### CLI Arguments Mode
-Pass the URL or LinkedIn username directly:
+Pass any custom URL or LinkedIn username directly:
 ```bash
-# Using username
-python generate_qr.py --url keerthikumar
+# Using username/handle
+python generate_qr.py --url keerthi-kumar-r
 
 # Using full profile URL
-python generate_qr.py --url "https://www.linkedin.com/in/keerthikumar"
+python generate_qr.py --url "https://www.linkedin.com/in/keerthi-kumar-r/"
 
 # Custom output file name
-python generate_qr.py -u keerthikumar -o my_linkedin_qr.png
+python generate_qr.py -u keerthi-kumar-r -o my_linkedin_qr.png
 
 # Custom colors (Classic Black & White)
-python generate_qr.py -u keerthikumar --fill-color black --back-color white
+python generate_qr.py -u keerthi-kumar-r --fill-color black --back-color white
 
 # High-res print quality
-python generate_qr.py -u keerthikumar --box-size 20 --border 6 -o print_qr.png
+python generate_qr.py -u keerthi-kumar-r --box-size 20 --border 6 -o print_qr.png
 ```
 
 ---
@@ -65,7 +66,7 @@ python generate_qr.py -u keerthikumar --box-size 20 --border 6 -o print_qr.png
 
 | Flag | Description | Default |
 |---|---|---|
-| `-u`, `--url` | LinkedIn profile URL or username | Interactive prompt |
+| `-u`, `--url` | LinkedIn profile URL or username | `https://www.linkedin.com/in/keerthi-kumar-r/` |
 | `-o`, `--output` | Output filename/path for the PNG | `linkedin_qr.png` |
 | `--fill-color` | Color for the QR code modules | `#0A66C2` (LinkedIn Blue) |
 | `--back-color` | Background color | `white` |

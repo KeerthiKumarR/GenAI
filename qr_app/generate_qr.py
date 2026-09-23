@@ -66,6 +66,9 @@ def generate_qr(
         qr_terminal.print_ascii(invert=True)
 
 
+DEFAULT_LINKEDIN_URL = "https://www.linkedin.com/in/keerthi-kumar-r/"
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate a high-res QR code for your LinkedIn profile."
@@ -73,7 +76,8 @@ def main():
     parser.add_argument(
         "-u",
         "--url",
-        help="LinkedIn profile URL or username (e.g., 'keerthikumar' or 'https://www.linkedin.com/in/keerthikumar')",
+        default=DEFAULT_LINKEDIN_URL,
+        help=f"LinkedIn profile URL or username (default: '{DEFAULT_LINKEDIN_URL}')",
     )
     parser.add_argument(
         "-o",
